@@ -8,7 +8,7 @@ export type Project = {
   id: string;
   name: string;
   owner?: Array<User>;
-  startDate: Date | null;
+  startDate: Date;
   tasks?: Array<Task>;
   updatedAt: Date;
 };

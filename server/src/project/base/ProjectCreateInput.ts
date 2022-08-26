@@ -60,15 +60,12 @@ class ProjectCreateInput {
   owner?: UserCreateNestedManyWithoutProjectsInput;
 
   @ApiProperty({
-    required: false,
+    required: true,
   })
   @IsDate()
   @Type(() => Date)
-  @IsOptional()
-  @Field(() => Date, {
-    nullable: true,
-  })
-  startDate?: Date | null;
+  @Field(() => Date)
+  startDate!: Date;
 
   @ApiProperty({
     required: false,

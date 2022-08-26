@@ -46,7 +46,7 @@ class TaskUpdateInput {
   @Field(() => Number, {
     nullable: true,
   })
-  estimationDays?: number | null;
+  estimationDays?: number;
 
   @ApiProperty({
     required: false,
@@ -69,7 +69,7 @@ class TaskUpdateInput {
   @Field(() => Date, {
     nullable: true,
   })
-  startDate?: Date;
+  startDate?: Date | null;
 
   @ApiProperty({
     required: false,
@@ -80,7 +80,7 @@ class TaskUpdateInput {
   @Field(() => EnumTaskStatus, {
     nullable: true,
   })
-  status?: "New" | "Pending" | "Ongoing" | "Done";
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
 
   @ApiProperty({
     required: false,
