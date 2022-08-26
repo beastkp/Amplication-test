@@ -3,3 +3,6 @@ This is a starter application created using Amplication. Amplication is an open-
 
 # Additional Details 
 For additional details regarding the application please refer to the README.md files in the respective folders
+
+# Server-Side Technologies 
+Amplication uses the following server-side technologies NestJS, Prisma, PostgreSQL, Passport, GraphQL, Swagger UI, Jest, Docker
