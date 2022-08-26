@@ -6,6 +6,6 @@ export type ProjectCreateInput = {
   dueDate?: Date | null;
   name: string;
   owner?: UserCreateNestedManyWithoutProjectsInput;
-  startDate?: Date | null;
+  startDate: Date;
   tasks?: TaskCreateNestedManyWithoutProjectsInput;
 };

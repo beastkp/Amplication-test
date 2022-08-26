@@ -40,6 +40,7 @@ export const TaskCreate = (props: CreateProps): React.ReactElement => {
             { label: "Done", value: "Done" },
           ]}
           optionText="label"
+          allowEmpty
           optionValue="value"
         />
         <TextInput label="Title" source="title" />

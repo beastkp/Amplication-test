@@ -17,6 +17,7 @@ import { IsOptional, ValidateNested } from "class-validator";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { UserListRelationFilter } from "../../user/base/UserListRelationFilter";
+import { DateTimeFilter } from "../../util/DateTimeFilter";
 import { TaskListRelationFilter } from "../../task/base/TaskListRelationFilter";
 @InputType()
 class ProjectWhereInput {
@@ -78,14 +79,14 @@ class ProjectWhereInput {
 
   @ApiProperty({
     required: false,
-    type: DateTimeNullableFilter,
+    type: DateTimeFilter,
   })
-  @Type(() => DateTimeNullableFilter)
+  @Type(() => DateTimeFilter)
   @IsOptional()
-  @Field(() => DateTimeNullableFilter, {
+  @Field(() => DateTimeFilter, {
     nullable: true,
   })
-  startDate?: DateTimeNullableFilter;
+  startDate?: DateTimeFilter;
 
   @ApiProperty({
     required: false,

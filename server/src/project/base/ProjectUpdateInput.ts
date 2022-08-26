@@ -71,7 +71,7 @@ class ProjectUpdateInput {
   @Field(() => Date, {
     nullable: true,
   })
-  startDate?: Date | null;
+  startDate?: Date;
 
   @ApiProperty({
     required: false,

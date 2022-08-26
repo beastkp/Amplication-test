@@ -1,15 +1,15 @@
 import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
-import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { IntFilter } from "../../util/IntFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { ProjectWhereUniqueInput } from "../project/ProjectWhereUniqueInput";
-import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 
 export type TaskWhereInput = {
   assignedTo?: UserWhereUniqueInput;
-  estimationDays?: IntNullableFilter;
+  estimationDays?: IntFilter;
   id?: StringFilter;
   project?: ProjectWhereUniqueInput;
-  startDate?: DateTimeFilter;
+  startDate?: DateTimeNullableFilter;
   status?: "New" | "Pending" | "Ongoing" | "Done";
   title?: StringFilter;
 };

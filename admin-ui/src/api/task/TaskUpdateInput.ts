@@ -3,9 +3,9 @@ import { ProjectWhereUniqueInput } from "../project/ProjectWhereUniqueInput";
 
 export type TaskUpdateInput = {
   assignedTo?: UserWhereUniqueInput | null;
-  estimationDays?: number | null;
+  estimationDays?: number;
   project?: ProjectWhereUniqueInput | null;
-  startDate?: Date;
-  status?: "New" | "Pending" | "Ongoing" | "Done";
+  startDate?: Date | null;
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
   title?: string;
 };

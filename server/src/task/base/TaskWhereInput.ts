@@ -14,10 +14,10 @@ import { ApiProperty } from "@nestjs/swagger";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import { ValidateNested, IsOptional, IsEnum } from "class-validator";
 import { Type } from "class-transformer";
-import { IntNullableFilter } from "../../util/IntNullableFilter";
+import { IntFilter } from "../../util/IntFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { ProjectWhereUniqueInput } from "../../project/base/ProjectWhereUniqueInput";
-import { DateTimeFilter } from "../../util/DateTimeFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { EnumTaskStatus } from "./EnumTaskStatus";
 @InputType()
 class TaskWhereInput {
@@ -35,14 +35,14 @@ class TaskWhereInput {
 
   @ApiProperty({
     required: false,
-    type: IntNullableFilter,
+    type: IntFilter,
   })
-  @Type(() => IntNullableFilter)
+  @Type(() => IntFilter)
   @IsOptional()
-  @Field(() => IntNullableFilter, {
+  @Field(() => IntFilter, {
     nullable: true,
   })
-  estimationDays?: IntNullableFilter;
+  estimationDays?: IntFilter;
 
   @ApiProperty({
     required: false,
@@ -69,14 +69,14 @@ class TaskWhereInput {
 
   @ApiProperty({
     required: false,
-    type: DateTimeFilter,
+    type: DateTimeNullableFilter,
   })
-  @Type(() => DateTimeFilter)
+  @Type(() => DateTimeNullableFilter)
   @IsOptional()
-  @Field(() => DateTimeFilter, {
+  @Field(() => DateTimeNullableFilter, {
     nullable: true,
   })
-  startDate?: DateTimeFilter;
+  startDate?: DateTimeNullableFilter;
 
   @ApiProperty({
     required: false,

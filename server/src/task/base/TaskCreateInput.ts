@@ -38,15 +38,12 @@ class TaskCreateInput {
   assignedTo?: UserWhereUniqueInput | null;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: Number,
   })
   @IsInt()
-  @IsOptional()
-  @Field(() => Number, {
-    nullable: true,
-  })
-  estimationDays?: number | null;
+  @Field(() => Number)
+  estimationDays!: number;
 
   @ApiProperty({
     required: false,
@@ -61,20 +58,26 @@ class TaskCreateInput {
   project?: ProjectWhereUniqueInput | null;
 
   @ApiProperty({
-    required: true,
+    required: false,
   })
   @IsDate()
   @Type(() => Date)
-  @Field(() => Date)
-  startDate!: Date;
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  startDate?: Date | null;
 
   @ApiProperty({
-    required: true,
+    required: false,
     enum: EnumTaskStatus,
   })
   @IsEnum(EnumTaskStatus)
-  @Field(() => EnumTaskStatus)
-  status!: "New" | "Pending" | "Ongoing" | "Done";
+  @IsOptional()
+  @Field(() => EnumTaskStatus, {
+    nullable: true,
+  })
+  status?: "New" | "Pending" | "Ongoing" | "Done" | null;
 
   @ApiProperty({
     required: true,

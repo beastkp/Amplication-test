@@ -6,6 +6,6 @@ export type ProjectUpdateInput = {
   dueDate?: Date | null;
   name?: string;
   owner?: UserUpdateManyWithoutProjectsInput;
-  startDate?: Date | null;
+  startDate?: Date;
   tasks?: TaskUpdateManyWithoutProjectsInput;
 };
