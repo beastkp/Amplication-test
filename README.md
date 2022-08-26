@@ -6,3 +6,6 @@ For additional details regarding the application please refer to the README.md f
 
 # Server-Side Technologies 
 Amplication uses the following server-side technologies NestJS, Prisma, PostgreSQL, Passport, GraphQL, Swagger UI, Jest, Docker
+
+# Client-Side Technologies
+The client is provided only as a starting point for simple CRUD operations using the following technologies: ReactJS, React-Admin, Axios, Formik.
