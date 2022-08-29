@@ -1,11 +1,11 @@
 # Amplication-test
 This is a starter application created using Amplication. Amplication is an open-source platform that helps developers build backend services without spending time on repetitive coding tasks and boilerplate code. Amplication auto-generates a fully functional, production-ready backend based on TypeScript and Node.js.
 
-# Additional Details 
+## Additional Details 
 For additional details regarding the application please refer to the README.md files in the respective folders
 
-# Server-Side Technologies 
+## Server-Side Technologies 
 Amplication uses the following server-side technologies NestJS, Prisma, PostgreSQL, Passport, GraphQL, Swagger UI, Jest, Docker
 
-# Client-Side Technologies
+## Client-Side Technologies
 The client is provided only as a starting point for simple CRUD operations using the following technologies: ReactJS, React-Admin, Axios, Formik.
